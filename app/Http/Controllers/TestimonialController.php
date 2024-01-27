@@ -93,7 +93,7 @@ class TestimonialController extends Controller
     }
     public function trashed()
     {
-       $testi= Testimonial::onlyTrashed()->paginate(3);
+       $testi= Testimonial::onlyTrashed()->get();
         return view('admin.trashTesti', compact('testi'));
     }
     public function forceDelete(string $id)

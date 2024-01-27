@@ -14,6 +14,6 @@
    <h5>created at:{{$testimonial->created_at}} </h5>
    <h5>update at:{{$testimonial->updated_at}} </h5>
    <h5>{{($testimonial->published)?"Published":"Not Published"}} </h5>
-   <img src="{{ asset('assets/img/'.$testimonial->image) }}" alt="{{$testi->clientName}}" style="width:200px;">
+   <img src="{{ asset('assets/img/'.$testimonial->image) }}" alt="{{$testimonial->clientName}}" style="width:200px;">
 </body>
 </html>
