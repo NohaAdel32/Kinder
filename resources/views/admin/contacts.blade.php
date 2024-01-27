@@ -49,6 +49,7 @@
     
     </tbody>
   </table>
+  {{$contact->links()}}
 </div>
 
 </body>

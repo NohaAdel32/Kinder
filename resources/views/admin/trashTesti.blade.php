@@ -50,6 +50,7 @@
     
     </tbody>
   </table>
+  {{$testi->links()}}
 </div>
 
 </body>

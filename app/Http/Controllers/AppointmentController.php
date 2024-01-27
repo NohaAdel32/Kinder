@@ -12,7 +12,7 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-        $appointment = Appointment::get();
+        $appointment = Appointment::paginate(3);
         return view('admin.appointments', compact('appointment'));
     }
 

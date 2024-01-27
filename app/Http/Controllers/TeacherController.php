@@ -14,7 +14,7 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        $teacher = Teacher::get();
+        $teacher = Teacher::paginate(3);
         return view('admin.teachers', compact('teacher'));
     }
 
@@ -96,7 +96,7 @@ $data=$request->validate([
     }
     public function trashed()
     {
-       $teacher= Teacher::onlyTrashed()->get();
+       $teacher= Teacher::onlyTrashed()->paginate(3);
         return view('admin.trashTeacher', compact('teacher'));
     }
     public function forceDelete(string $id)

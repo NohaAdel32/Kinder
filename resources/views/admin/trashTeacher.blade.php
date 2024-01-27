@@ -50,6 +50,7 @@
     
     </tbody>
   </table>
+  {{$teacher->links()}}
 </div>
 
 </body>

@@ -42,6 +42,7 @@
     
     </tbody>
   </table>
+  {{$appointment->links()}}
 </div>
 
 </body>

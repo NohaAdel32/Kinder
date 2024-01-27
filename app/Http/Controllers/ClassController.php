@@ -15,7 +15,7 @@ class ClassController extends Controller
      */
     public function index()
     {
-        $class = KiderClass::get();
+        $class = KiderClass::paginate(3);
         return view('admin.classes', compact('class'));
     }
 
@@ -105,7 +105,7 @@ class ClassController extends Controller
     }
     public function trashed()
     {
-       $class= KiderClass::onlyTrashed()->get();
+       $class= KiderClass::onlyTrashed()->paginate(3);
         return view('admin.trashClass', compact('class'));
     }
     public function forceDelete(string $id)

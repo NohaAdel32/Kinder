@@ -30,12 +30,13 @@ class ContactController extends Controller
     }
     public function index()
     {
-        $contact = Contact::get();
+        $contact = Contact::paginate(3);
         return view('admin.contacts', compact('contact'));
     }
     public function show(string $id)
     {
        $contact= Contact::findOrFail($id);
+       $contact->update(['read_at' => 1]);
        return view('admin.showcontact', compact('contact'));
     }
     public function destroy(string $id)
