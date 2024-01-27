@@ -35,9 +35,9 @@ $data=$request->validate([
             'teacherName'=>'required|string|max:50',
             'position'=> 'required|string',
             'image' => 'required|mimes:png,jpg,jpeg|max:2048',
-            'facebook' => 'nullable',
-            'twiter' => 'nullable',
-            'instagram' => 'nullable',
+            'facebook' => 'required',
+            'twiter' => 'required',
+            'instagram' => 'required',
             ]);
             $fileName = $this->uploadFile($request->image, 'assets/img');    
             $data['image'] = $fileName;        
@@ -73,9 +73,9 @@ $data=$request->validate([
             'teacherName'=>'required|string|max:50',
             'position'=> 'required|string',
             'image' => 'sometimes|mimes:png,jpg,jpeg|max:2048',
-            'facebook' => 'sometimes',
-            'twiter' => 'sometimes',
-            'instagram' => 'sometimes',
+            'facebook' => 'required',
+            'twiter' => 'required',
+            'instagram' => 'required',
             ]);
             if ($request->hasFile('image')){
                 $fileName = $this->uploadFile($request->image, 'assets/img');    
